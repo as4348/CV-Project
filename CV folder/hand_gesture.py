@@ -1,20 +1,20 @@
 import cv2
 import numpy as np
 
-print("🎥 Starting Hand Gesture Recognition...")
+print("Starting Hand Gesture Recognition...")
 
 # Open webcam safely
 cap = cv2.VideoCapture(0, cv2.CAP_DSHOW)
 if not cap.isOpened():
-    print("❌ Could not access the camera.")
+    print("Could not access the camera.")
     exit()
 
-print("✅ Camera opened successfully! Place your hand inside the green box. Press 'q' to quit.")
+print("Camera opened successfully! Place your hand inside the green box. Press 'q' to quit.")
 
 while True:
     ret, frame = cap.read()
     if not ret:
-        print("⚠️ Failed to grab frame.")
+        print("Failed to grab frame.")
         break
 
     roi = frame[100:400, 100:400]
@@ -46,4 +46,5 @@ while True:
 
 cap.release()
 cv2.destroyAllWindows()
-print("✅ Camera released and windows closed.")
+print("Camera released and windows closed.")
+
