@@ -1,7 +1,7 @@
 import cv2
 import numpy as np
 
-print("🎥 Starting Color Tracking...")
+print("Starting Color Tracking...")
 
 # Open webcam safely
 cap = cv2.VideoCapture(0, cv2.CAP_DSHOW)
@@ -39,4 +39,5 @@ while True:
 cap.release()
 cv2.destroyAllWindows()
 print("Camera released and windows closed.")
+
 
