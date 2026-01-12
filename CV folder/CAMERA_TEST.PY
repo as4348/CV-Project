@@ -1,6 +1,6 @@
 import cv2
 
-print("🎥 Testing camera access...")
+print("Testing camera access...")
 
 cap = cv2.VideoCapture(0)
 if not cap.isOpened():
@@ -20,4 +20,5 @@ while True:
 cap.release()
 cv2.destroyAllWindows()
 print("Camera released and windows closed.")
+
 
