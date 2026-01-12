@@ -1,14 +1,14 @@
 import cv2
 
-print("🎥 Starting Motion Detection...")
+print("Starting Motion Detection...")
 
 # Open webcam safely
 cap = cv2.VideoCapture(0, cv2.CAP_DSHOW)
 if not cap.isOpened():
-    print("❌ Could not access the camera.")
+    print("Could not access the camera.")
     exit()
 
-print("✅ Camera opened successfully! Move an object in front of the camera. Press 'q' to quit.")
+print("Camera opened successfully! Move an object in front of the camera. Press 'q' to quit.")
 
 ret, frame1 = cap.read()
 ret, frame2 = cap.read()
@@ -36,7 +36,7 @@ while cap.isOpened():
     ret, frame2 = cap.read()
 
     if not ret:
-        print("⚠️ Failed to read frame.")
+        print("Failed to read frame.")
         break
 
     if cv2.waitKey(40) & 0xFF == ord('q'):
@@ -44,4 +44,5 @@ while cap.isOpened():
 
 cap.release()
 cv2.destroyAllWindows()
-print("✅ Camera released and windows closed.")
+print("Camera released and windows closed.")
+
