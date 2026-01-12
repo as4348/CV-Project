@@ -1,6 +1,6 @@
 import cv2
 
-print("🎥 Starting Live Edge Detection...")
+print("Starting Live Edge Detection...")
 
 # Open your webcam safely
 cap = cv2.VideoCapture(0, cv2.CAP_DSHOW)
@@ -41,4 +41,5 @@ while True:
 cap.release()
 cv2.destroyAllWindows()
 print("Camera released and windows closed.")
+
 
