@@ -6,15 +6,15 @@ print("🎥 Starting Color Tracking...")
 # Open webcam safely
 cap = cv2.VideoCapture(0, cv2.CAP_DSHOW)
 if not cap.isOpened():
-    print("❌ Could not access the camera.")
+    print("Could not access the camera.")
     exit()
 
-print("✅ Camera opened successfully! Hold a blue object and press 'q' to quit.")
+print("Camera opened successfully! Hold a blue object and press 'q' to quit.")
 
 while True:
     ret, frame = cap.read()
     if not ret:
-        print("⚠️ Failed to grab frame.")
+        print("Failed to grab frame.")
         break
 
     hsv = cv2.cvtColor(frame, cv2.COLOR_BGR2HSV)
@@ -38,4 +38,5 @@ while True:
 
 cap.release()
 cv2.destroyAllWindows()
-print("✅ Camera released and windows closed.")
+print("Camera released and windows closed.")
+
